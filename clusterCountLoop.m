@@ -1,3 +1,5 @@
+%% Run on tiff-files in simulatedImages directory
+
 % Since tiffs are labeled 0 to 19, use for loop iterator, m, to index
 % preallocate container variables, 20 images with 22 time points
 clusterMat = zeros([20, 22]);

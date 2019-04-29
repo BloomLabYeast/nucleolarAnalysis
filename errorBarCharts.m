@@ -1,5 +1,5 @@
 %% load in the data
-load('/Users/lawrimor/OneDrive - University of North Carolina at Chapel Hill/Walker_et_al/Images/expCountClusters_data.mat');
+load('expCountClusters_data.mat');
 
 %% Build error bar plot of STD of CDC14-GFP Signal Intensities
 figure;
@@ -19,7 +19,7 @@ errorbar([mean(wtStdArray);...
 hold off;
 set(gca,'TickLabelInterpreter', 'tex');
 set(gca,'xticklabel',{'WT','{\it fob1}\Delta','{\it hmo1}\Delta'});
-ylabel('Standard Deviation of CDC14-GFP Signal Intensities');
+ylabel('signal STD');
 %% Build error bar plot of cluster number
 figure;
 bar([mean(wtClusterArray); mean(fob1ClusterArray); mean(hmo1ClusterArray)],...
@@ -38,10 +38,10 @@ errorbar([mean(wtClusterArray);...
 hold off;
 set(gca,'TickLabelInterpreter', 'tex');
 set(gca,'xticklabel',{'WT','{\it fob1}\Delta','{\it hmo1}\Delta'});
-ylabel('Number of Clusters in CDC14-GFP Signal');
+ylabel('number of clusters');
 %% Area plots
 clear;
-load('C:\Users\lawrimor\OneDrive - University of North Carolina at Chapel Hill\Walker_et_al\Images\expAreaCompare.mat');
+load('expAreaCompare.mat');
 figure;
 bar([mean(wtArea)*0.0645^2; mean(fob1Area)*0.0645^2; mean(hmo1Area)*0.0645^2],...
     'FaceColor', [0.8, 0.8, 0.8]);
@@ -59,3 +59,4 @@ errorbar([mean(wtArea*0.0645^2);...
 hold off;
 set(gca,'TickLabelInterpreter', 'tex');
 set(gca,'xticklabel',{'WT','{\it fob1}\Delta','{\it hmo1}\Delta'});
+ylabel('signal area (\mum)')
